@@ -56,7 +56,7 @@ function customEndPointOrder()
 
 function customGetOrder($params)
 {
-    //definition des arguments du loop 
+    //definition des arguments du looop 
     $orders = new WP_Query(array(
         'post_type' => 'shop_order',
         'post_status'    => 'wc-processing'
