@@ -89,6 +89,7 @@ function customGetOrder($params)
                 ));
             }
             $wc_order_row = $wc_order->get_data();
+            
             array_push($order_process, array(
                 'order_flag' => $orders->posts[0]->order_flag,
                 'id' => $wc_order->get_id(),
@@ -130,7 +131,12 @@ function customGetOrder($params)
         }
     }
 
-    return $order_process;
+
+    $customer = get_users();
+
+    $customers = new  WC_Customer(2);
+
+    return $customers->get_data();
 }
 
 
